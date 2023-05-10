@@ -15,9 +15,3 @@ Maven 3+
 How to run the application
 ---
 The application can be run with the run.sh script located in the root directory of the project
-
-Future improvements
----
-- Use property file to read input.txt
-- More unit test coverage
-- Error checking for input file

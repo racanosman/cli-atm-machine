@@ -1,0 +1,33 @@
+Title: Check ATM has sufficient cash
+Priority: High
+Story Points: 3
+
+----------
+User Story
+----------
+
+As an ATM Administrator
+I want to ensure there are sufficient funds available in the ATM
+So that the ATM never runs out of funds
+
+-----------
+Description
+-----------
+
+In order to ensure the ATM never runs out of cash, the application needs to check the total funds available in the ATM before a transaction is made. When a customer requests to withdraw cash from the ATM, the application should first check if there are sufficient funds available in the ATM for the customer to withdraw their cash. If the ATM has sufficient cash available, the application should proceed to the next step and allow the customer to withdraw cash. If the ATM is out of cash, the application should return an ATM_ERR error.
+
+-------------------
+Acceptance Criteria
+-------------------
+
+1.
+
+Given the ATM has funds available
+When a customer attempts to withdraw an amount that is less than or equal to the total available funds of the ATM
+Then the ATM should allow the application to withdraw cash and update its total balance
+
+2.
+
+Given the ATM has funds available
+When a customer attempts to withdraw an amount that is greater than the total available funds in the ATM
+Then the ATM should respond with an ATM_ERR error and the withdraw attempt cancelled.
